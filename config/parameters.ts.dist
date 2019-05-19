@@ -1,4 +1,4 @@
-export type AppEnvType = {
+export type AppParametersType = {
   SECRET: string
   DATABASE_TYPE: "mysql" | "mariadb"
   DATABASE_HOST: string,
@@ -17,13 +17,13 @@ export default {
   DATABASE_TYPE: "mysql",
   DATABASE_HOST: "localhost",
   DATABASE_PORT: 3306,
-  DATABASE_USERNAME: "test",
-  DATABASE_PASSWORD: "test",
-  DATABASE_NAME: "test",
+  DATABASE_USERNAME: "",
+  DATABASE_PASSWORD: "",
+  DATABASE_NAME: "",
   SMTP_HOST: "",
   SMTP_PORT: 2525,
   SMTP_AUTH: {
     user: "",
     pass: ""
   }
-} as AppEnvType;
+} as AppParametersType;
