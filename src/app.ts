@@ -1,6 +1,7 @@
 import App, { configurable, LoggerService, ORMService, MailerService, TemplatingService, ExpressRouter, GraphQLRouter } from "zedix";
 
 import config from "../config/config";
+import RootController from "./controller/RootController";
 
 const createMailerConfig = config => {
   return [
@@ -20,7 +21,9 @@ export default (env: "production" | "development" | "test") => {
       env: config.parameters.ENV,
       ...config.logger
     }),
-    controllers: [],
+    controllers: [
+      new RootController(),
+    ],
     services: [
       ORMService,
       configurable(MailerService, createMailerConfig),
