@@ -1,4 +1,4 @@
-import App, { configurable, LoggerService, ORMService, MailerService, TemplatingService, ExpressRouter, GraphQLRouter } from "zedix";
+import App, { configurable, LoggerService, ORMService, MailerService, TemplatingService, WebRouter, GraphQLRouter } from "zedix";
 
 import config from "../config/config";
 import RootController from "./controller/RootController";
@@ -34,7 +34,7 @@ export default (env: "production" | "development" | "test") => {
       new GraphQLRouter({
         schemaPath: __dirname + "/schema",
       }),
-      new ExpressRouter({
+      new WebRouter({
         views: config.paths.views,
         public: config.paths.public
       })

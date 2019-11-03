@@ -10,7 +10,7 @@
     "pretty": "prettier --write \"{src}/**/*.{ts,tsx}\""
   },
   "dependencies": {
-    "zedix": "0.1.0"
+    "zedix": "0.6.0-rc.0"
   },
   "devDependencies": {
     "prettier": "^1.17.0",
