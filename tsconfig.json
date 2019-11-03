@@ -16,6 +16,10 @@
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
       "sourceMap": true,
-      "typeRoots": ["./node_modules/@types", "./src/typings"]
+      "typeRoots": ["./node_modules/@types", "./src/typings"],
+      "types": [
+         "reflect-metadata",
+         "node"
+      ]
    }
 }
